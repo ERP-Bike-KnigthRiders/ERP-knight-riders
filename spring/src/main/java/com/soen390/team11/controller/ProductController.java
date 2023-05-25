@@ -74,6 +74,8 @@ public class ProductController {
      * @param pid The product's ID
      * @return The product's information
      */
+    
+    //This method fetches a product by its ID from a service, converts the product's data to a JSON string if it exists, or returns an HTTP 404 error response if the product doesn't exist or there's an error in JSON processing.
     @GetMapping("/{pid}")
     public ResponseEntity<?> retrieveProduct(@PathVariable String pid) {
         String id = String.valueOf(pid);
