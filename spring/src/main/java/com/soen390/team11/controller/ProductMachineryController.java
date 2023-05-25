@@ -16,7 +16,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Controller for the product machinery
+ * This class manages product machinery-related operations including:
+ * - Retrieving all machinery,
+ * - Creating new machinery,
+ * - Updating machinery status,
+ * - Assigning machinery for product production.
  */
 @RestController
 @RequestMapping("/machinery")
@@ -75,6 +79,9 @@ public class ProductMachineryController {
      * @param op The Operation to do on the product machinery
      * @return A success message
      */
+    
+    
+    // Attempts to update the status of the machinery identified by 'machineryId' based on the 'op' parameter; if successful, returns a JSON response with the result and a success status, else returns the result with a bad request status.
     @PostMapping("/{machineryId}/{op}")
     public ResponseEntity<?> updateMachineryStatus(@PathVariable String machineryId, @PathVariable String op) {
         try {

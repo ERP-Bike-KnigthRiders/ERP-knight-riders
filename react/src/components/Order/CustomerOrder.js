@@ -28,6 +28,7 @@ const CustomerOrder = (props) => {
                 ShipOrProduce(rowData);
             },
         },
+        console.log("Order Function added")
     ];
     const ShipOrProduce = (rowData) => {
         request

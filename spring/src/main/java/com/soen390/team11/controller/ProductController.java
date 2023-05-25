@@ -17,11 +17,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Controller for Product
- */
+
 @RestController
 @RequestMapping("/product")
+
+/**
+ * The ProductController class, part of the com.soen390.team11.controller package, 
+ * serves as a RESTful API controller for managing product-related requests. 
+ * It uses the ProductService for business logic execution and ObjectMapper for handling JSON data. 
+ * It provides endpoints for product creation, retrieval, update, deletion, part retrieval, and cost calculation.
+ */
 public class ProductController {
 
     ObjectMapper objectMapper = new ObjectMapper();
@@ -69,6 +74,8 @@ public class ProductController {
      * @param pid The product's ID
      * @return The product's information
      */
+    
+    //This method fetches a product by its ID from a service, converts the product's data to a JSON string if it exists, or returns an HTTP 404 error response if the product doesn't exist or there's an error in JSON processing.
     @GetMapping("/{pid}")
     public ResponseEntity<?> retrieveProduct(@PathVariable String pid) {
         String id = String.valueOf(pid);
