@@ -79,6 +79,9 @@ public class ProductMachineryController {
      * @param op The Operation to do on the product machinery
      * @return A success message
      */
+    
+    
+    // Attempts to update the status of the machinery identified by 'machineryId' based on the 'op' parameter; if successful, returns a JSON response with the result and a success status, else returns the result with a bad request status.
     @PostMapping("/{machineryId}/{op}")
     public ResponseEntity<?> updateMachineryStatus(@PathVariable String machineryId, @PathVariable String op) {
         try {
