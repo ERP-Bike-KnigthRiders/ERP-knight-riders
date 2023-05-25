@@ -16,7 +16,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Controller for the product machinery
+ * This class manages product machinery-related operations including:
+ * - Retrieving all machinery,
+ * - Creating new machinery,
+ * - Updating machinery status,
+ * - Assigning machinery for product production.
  */
 @RestController
 @RequestMapping("/machinery")
