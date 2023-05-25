@@ -49,6 +49,9 @@ public class VendorController {
      * @param vid The vendor's ID
      * @return The vendor's information
      */
+    
+    
+    //This method fetches a vendor by its ID from a service, then maps the vendor's data into a DTO (Data Transfer Object) if it exists, or returns an HTTP 404 error response if the vendor does not exist.
     @GetMapping("/{vid}")
     public ResponseEntity getVendorById(@PathVariable String vid)
     {
