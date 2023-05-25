@@ -17,14 +17,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@RestController
+@RequestMapping("/product")
+
 /**
  * The ProductController class, part of the com.soen390.team11.controller package, 
  * serves as a RESTful API controller for managing product-related requests. 
  * It uses the ProductService for business logic execution and ObjectMapper for handling JSON data. 
  * It provides endpoints for product creation, retrieval, update, deletion, part retrieval, and cost calculation.
  */
-@RestController
-@RequestMapping("/product")
 public class ProductController {
 
     ObjectMapper objectMapper = new ObjectMapper();
