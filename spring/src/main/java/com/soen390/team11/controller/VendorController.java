@@ -18,6 +18,11 @@ import java.util.Optional;
 /**
  * Controller for the vendor
  */
+/*
+ * The VendorController class is a REST Controller in a Spring Boot application responsible for handling HTTP requests 
+ * related to Vendor operations. These operations include getting all vendors, getting a vendor by its ID, and 
+ * creating a new vendor.
+ */
 @RestController
 @RequestMapping("/vendor")
 public class VendorController {
